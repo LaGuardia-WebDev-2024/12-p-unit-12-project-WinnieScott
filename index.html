@@ -21,20 +21,20 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Groundhog Day</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+        What town does Phil live in?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">Scranton, PA</option>
+          <option value="movie2">Allentown, PA</option>
+          <option value="movie3">Punxatawney, PA</option>
+          <option value="movie4">Vorhees, NJ</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
@@ -43,19 +43,50 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        What object allows the president of the inner circle to speak Groundhogese and communicate with Phil to recieve his prediction?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">An ancient wooden staff</option>
+          <option value="book2">A mystical book</option>
+          <option value="book3">Nothing, Phil actually speaks English</option>
+          <option value="book4">A piece of Quartz</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
     <div id="book-result">
       <p id="book-text"></p>
-    </div>
+ </div>
+  <!-- Book Question -->
+    <form id="q3-form">
+      <label>
+        How old is Phil?
+        <select id="q3-answer">
+          <option value="age1">7</option>
+          <option value="age2">140</option>
+          <option value="age3">3</option>
+          <option value="age4">512</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="q3-result">
+      <p id="q3-text"></p>
+
+  <form id="q4-form">
+      <label>
+        What holiday did Groundhog Day originate from?
+        <select id="q4-answer">
+          <option value="holiday1">Saturnalia (Ancient Rome)</option>
+          <option value="holiday2">Candlemas (Germany)</option>
+          <option value="holiday3"></option>
+          <option value="holiday4">512</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="q4-result">
+      <p id="q4-text"></p>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
@@ -66,7 +97,7 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
+        if (answer === "movie3") {
           $("#movie-text").text("YESSSS!");
         } 
         else {
@@ -86,6 +117,21 @@ Select ONE Additional Feature to Add
         } 
         else {
           $("#book-text").text("Try Again!");
+        }
+      });
+
+     //=======================Book Question jQuery Code
+      $("#q3-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#q3-answer");
+        var answer = $answer.val();
+
+        if (answer === "age2") {
+          $("#q3-text").text("YESSSS!");
+        } 
+        else {
+          $("#q3-text").text("Try Again!");
         }
       });
       
