@@ -26,7 +26,7 @@ Select ONE Additional Feature to Add
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        What town does Phil live in?
+        What town does Phil live in?<br>
         <select id="movie-answer">
           <option value="movie1">Scranton, PA</option>
           <option value="movie2">Allentown, PA</option>
@@ -43,7 +43,7 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        What object allows the president of the inner circle to speak Groundhogese and communicate with Phil to recieve his prediction?
+        What object allows the president of the inner circle to speak Groundhogese and communicate with Phil to recieve his prediction?<br>
         <select id="book-answer">
           <option value="book1">An ancient wooden staff</option>
           <option value="book2">A mystical book</option>
@@ -59,7 +59,7 @@ Select ONE Additional Feature to Add
   <!-- Book Question -->
     <form id="q3-form">
       <label>
-        How old is Phil?
+        How old is Phil?<br>
         <select id="q3-answer">
           <option value="age1">7</option>
           <option value="age2">140</option>
@@ -74,18 +74,33 @@ Select ONE Additional Feature to Add
 
   <form id="q4-form">
       <label>
-        What holiday did Groundhog Day originate from?
+        What holiday did Groundhog Day originate from?<br>
         <select id="q4-answer">
           <option value="holiday1">Saturnalia (Ancient Rome)</option>
           <option value="holiday2">Candlemas (Germany)</option>
-          <option value="holiday3"></option>
-          <option value="holiday4">512</option>
+          <option value="holiday3">Yalda Night (Iran)</option>
+          <option value="holiday4">Lunar New Year (China)</option>
         </select>
       </label>
       <button type="submit">Check Answer</button>
     </form>
     <div id="q4-result">
       <p id="q4-text"></p>
+
+    <form id="q5-form">
+      <label>
+        What is the name of New York City's weather predicting groundhog?<br>
+        <select id="q5-answer">
+          <option value="name1">NYC Phil</option>
+          <option value="name2">Brooklyn Buck</option>
+          <option value="name3">Manhattan Matthew</option>
+          <option value="name4">Staten Island Chuck</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="q5-result">
+      <p id="q5-text"></p>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -132,6 +147,36 @@ Select ONE Additional Feature to Add
         } 
         else {
           $("#q3-text").text("Try Again!");
+        }
+      });
+
+       //=======================Book Question jQuery Code
+      $("#q4-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#q4-answer");
+        var answer = $answer.val();
+
+        if (answer === "holiday2") {
+          $("#q4-text").text("YESSSS!");
+        } 
+        else {
+          $("#q4-text").text("Try Again!");
+        }
+      });
+
+      //=======================Book Question jQuery Code
+      $("#q5-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#q5-answer");
+        var answer = $answer.val();
+
+        if (answer === "name4") {
+          $("#q5-text").text("YESSSS!");
+        } 
+        else {
+          $("#q5-text").text("Try Again!");
         }
       });
       
