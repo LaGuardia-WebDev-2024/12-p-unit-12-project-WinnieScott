@@ -1,6 +1,6 @@
 <!-- Unit 12 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
+[ YES ] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
 [  ] Include Three Images
@@ -39,11 +39,11 @@ Select ONE Additional Feature to Add
     <div id="movie-result">
       <p id="movie-text"></p>
     </div>
-    <hr />
+   
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        What object allows the president of the inner circle to speak Groundhogese and communicate with Phil to recieve his prediction?<br>
+        <span class="words">What object allows the president of the inner circle to speak Groundhogese and communicate with Phil to recieve his prediction?</span> <br>
         <select id="book-answer">
           <option value="book1">An ancient wooden staff</option>
           <option value="book2">A mystical book</option>
@@ -56,6 +56,7 @@ Select ONE Additional Feature to Add
     <div id="book-result">
       <p id="book-text"></p>
  </div>
+  
   <!-- Book Question -->
     <form id="q3-form">
       <label>
@@ -71,7 +72,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="q3-result">
       <p id="q3-text"></p>
-
+     </div>
+    
   <form id="q4-form">
       <label>
         What holiday did Groundhog Day originate from?<br>
@@ -86,7 +88,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="q4-result">
       <p id="q4-text"></p>
-
+    </div>
+  
     <form id="q5-form">
       <label>
         What is the name of New York City's weather predicting groundhog?<br>
@@ -101,7 +104,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="q5-result">
       <p id="q5-text"></p>
-   
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
@@ -111,12 +114,14 @@ Select ONE Additional Feature to Add
 
         var $answer = $("#movie-answer");
         var answer = $answer.val();
-
+        $("#movie-result").hide();
         if (answer === "movie3") {
-          $("#movie-text").text("YESSSS!");
+          $("#movie-text").text("CORRECT");
+          $("#movie-result").fadeIn(1000);
         } 
         else {
-          $("#movie-text").text("Try Again!");
+          $("#movie-text").text("TRY AGAIN");
+          $("#movie-result").slideDown(1000);
         }
       });
 
@@ -126,12 +131,14 @@ Select ONE Additional Feature to Add
 
         var $answer = $("#book-answer");
         var answer = $answer.val();
-
+        $("#book-result").hide();
         if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
+          $("#book-text").text("CORRECT");
+          $("#book-result").fadeIn(1000);
         } 
         else {
-          $("#book-text").text("Try Again!");
+          $("#book-text").text("TRY AGAIN");
+          $("#book-result").slideDown(1000)
         }
       });
 
@@ -141,12 +148,14 @@ Select ONE Additional Feature to Add
 
         var $answer = $("#q3-answer");
         var answer = $answer.val();
-
+        $("#q3-result").hide();
         if (answer === "age2") {
-          $("#q3-text").text("YESSSS!");
+          $("#q3-text").text("CORRECT");
+          $("#q3-result").fadeIn(1000);
         } 
         else {
-          $("#q3-text").text("Try Again!");
+          $("#q3-text").text("TRY AGAIN");
+          $("#q3-result").slideDown(1000);
         }
       });
 
@@ -156,12 +165,14 @@ Select ONE Additional Feature to Add
 
         var $answer = $("#q4-answer");
         var answer = $answer.val();
-
+        $("#q4-result").hide();
         if (answer === "holiday2") {
-          $("#q4-text").text("YESSSS!");
+          $("#q4-text").text("CORRECT");
+          $("#q4-result").fadeIn(1000);
         } 
         else {
-          $("#q4-text").text("Try Again!");
+          $("#q4-text").text("TRY AGAIN");
+          $("#q4-result").slideDown(1000);
         }
       });
 
@@ -171,12 +182,14 @@ Select ONE Additional Feature to Add
 
         var $answer = $("#q5-answer");
         var answer = $answer.val();
-
+        $("#q5-result").hide();
         if (answer === "name4") {
-          $("#q5-text").text("YESSSS!");
+          $("#q5-text").text("CORRECT");
+          $("#q5-result").fadeIn(1000);
         } 
         else {
-          $("#q5-text").text("Try Again!");
+          $("#q5-text").text("TRY AGAIN");
+          $("#q5-result").slideDown(1000);
         }
       });
       
