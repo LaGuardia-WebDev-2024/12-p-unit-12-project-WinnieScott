@@ -21,12 +21,12 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About Groundhog Day</h1>
-    <hr />
+    <h1><span class= "words">Quiz About Groundhog Day</span></h1>
+    
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        What town does Phil live in?<br>
+        <div class= "words">What town does Phil live in?</div><br>
         <select id="movie-answer">
           <option value="movie1">Scranton, PA</option>
           <option value="movie2">Allentown, PA</option>
@@ -37,13 +37,15 @@ Select ONE Additional Feature to Add
       <button type="submit">Check Answer</button>
     </form>
     <div id="movie-result">
-      <p id="movie-text"></p>
+      <p id="movie-text">
+        <img src= "https://swiftmedia.s3.amazonaws.com/mountain.swiftcom.com/images/sites/7/2023/06/07012803/47ab0aa0-a67d-5b79-acbf-820dcaf1fac1-scaled.jpg">
+      </p>
     </div>
    
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        <span class="words">What object allows the president of the inner circle to speak Groundhogese and communicate with Phil to recieve his prediction?</span> <br>
+        <div class="words">What object allows one to understand Groundhogese and recieve Phil's prediction?</div> <br>
         <select id="book-answer">
           <option value="book1">An ancient wooden staff</option>
           <option value="book2">A mystical book</option>
@@ -60,7 +62,7 @@ Select ONE Additional Feature to Add
   <!-- Book Question -->
     <form id="q3-form">
       <label>
-        How old is Phil?<br>
+       <div class="words"> How old is Phil?</div><br>
         <select id="q3-answer">
           <option value="age1">7</option>
           <option value="age2">140</option>
@@ -76,7 +78,7 @@ Select ONE Additional Feature to Add
     
   <form id="q4-form">
       <label>
-        What holiday did Groundhog Day originate from?<br>
+       <div class="words"> What holiday did Groundhog Day originate from?</div><br>
         <select id="q4-answer">
           <option value="holiday1">Saturnalia (Ancient Rome)</option>
           <option value="holiday2">Candlemas (Germany)</option>
@@ -92,7 +94,7 @@ Select ONE Additional Feature to Add
   
     <form id="q5-form">
       <label>
-        What is the name of New York City's weather predicting groundhog?<br>
+        <div class="words">What is the name of New York City's weather predicting groundhog?</div><br>
         <select id="q5-answer">
           <option value="name1">NYC Phil</option>
           <option value="name2">Brooklyn Buck</option>

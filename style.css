@@ -12,8 +12,9 @@
 }
 
 #movie-form {
-  font-size: 20px;
+  font-size: 18px;
 }
+
 
 #book-result {
   background: rgb(168, 114, 14);
@@ -27,7 +28,7 @@
 }
 
 #book-form {
-   font-size: 20px;
+   font-size: 18px;
 }
 
 #q3-result {
@@ -42,7 +43,7 @@
 }
 
 #q3-form {
-   font-size: 20px;
+   font-size: 18px;
 }
 
 #q4-result{
@@ -57,7 +58,7 @@
 }
 
 #q4-form {
-   font-size: 20px;
+   font-size: 18px;
 }
 
 #q5-result {
@@ -72,15 +73,44 @@
 }
 
 #q5-form {
-   font-size: 20px;
+   font-size: 18px;
 }
 
-hr {
-  height: 5px;
-  background-color: black;
-}
 
 body{
   text-align: center;
-  background-image: url("https://www.ppic.org/wp-content/uploads/2021/09/close-up-of-redwood-burl-wood-grain-texture-1.jpg")
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8QQ-fK4OxMONqgnOxmha3Rm4KlpSsoXd1lw&s")
+}
+
+.words {
+  background-color:rgb(216, 179, 128);
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid;
+  width:fit-content;
+  margin:auto;
+}
+
+button {
+    background-color:rgb(216, 179, 128);
+}
+
+#movie-answer{
+  background-color:rgb(221, 173, 84);
+}
+
+#book-answer {
+  background-color:rgb(221, 173, 84);
+}
+
+#q3-answer {
+ background-color:rgb(221, 173, 84);
+}
+
+#q4-answer {
+  background-color:rgb(221, 173, 84);
+}
+
+#q5-answer {
+  background-color:rgb(221, 173, 84);
 }
