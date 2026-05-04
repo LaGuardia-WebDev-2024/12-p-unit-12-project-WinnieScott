@@ -3,14 +3,14 @@ Requirements
 [ YES ] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
-[  ] Include Three Images
+[ yes ] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
 [ no ] Feature 2 - Chain jQuery Methods
 [ no ] Feature 3 - .mouseover() & .mouseOut() Methods
 [ no ] Feature 4 - :hover Feature 
-[ no ] Feature 5 - Add an Additional Interactive Drop-down
+[ yes ] Feature 5 - Add an Additional Interactive Drop-down
 -->
 
 <!DOCTYPE html>
@@ -22,7 +22,11 @@ Select ONE Additional Feature to Add
   </head>
   <body>
     <h1><span class= "words">Quiz About Groundhog Day</span></h1>
+
+    <a class = "words" id = "link" href = "https://laguardia-webdev-2024.github.io/5-p-unit-5-project-WinnieScott/">Reference Material</a>
     
+
+
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
@@ -38,14 +42,14 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text">
-        <img src= "https://swiftmedia.s3.amazonaws.com/mountain.swiftcom.com/images/sites/7/2023/06/07012803/47ab0aa0-a67d-5b79-acbf-820dcaf1fac1-scaled.jpg">
+        
       </p>
     </div>
    
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        <div class="words">What object allows one to understand Groundhogese and recieve Phil's prediction?</div> <br>
+        <div class="words">What object allows one to understand Groundhogese and receive Phil's prediction?</div> <br>
         <select id="book-answer">
           <option value="book1">An ancient wooden staff</option>
           <option value="book2">A mystical book</option>
@@ -107,6 +111,39 @@ Select ONE Additional Feature to Add
     <div id="q5-result">
       <p id="q5-text"></p>
     </div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front"> 
+       <h1>hi</h1>
+    </div>
+    <div class="flip-card-back">
+    <img src="https://swiftmedia.s3.amazonaws.com/mountain.swiftcom.com/images/sites/7/2023/06/07012803/47ab0aa0-a67d-5b79-acbf-820dcaf1fac1-scaled.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front"> 
+       <h1>hi</h1>
+    </div>
+    <div class="flip-card-back">
+    <img src="https://lirp.cdn-website.com/4ef20bc3/dms3rep/multi/opt/groundhog_by_farmersalmanac.com-640w.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front"> 
+       <h1>hi</h1>
+    </div>
+    <div class="flip-card-back">
+    <img src="https://b984542.smushcdn.com/984542/wp-content/uploads/2019/11/Groundhog-Yawning-copy-e1574092367376.jpg?lossy=1&strip=1&webp=1">
+    </div>
+  </div>
+</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
@@ -117,13 +154,16 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
         $("#movie-result").hide();
+        $("img").hide();
         if (answer === "movie3") {
           $("#movie-text").text("CORRECT");
           $("#movie-result").fadeIn(1000);
+          $("img").fadeIn(1000)
         } 
         else {
           $("#movie-text").text("TRY AGAIN");
           $("#movie-result").slideDown(1000);
+          $("img").slideDown(1000)
         }
       });
 
