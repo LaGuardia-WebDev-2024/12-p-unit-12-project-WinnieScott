@@ -83,7 +83,7 @@ body{
 }
 
 #link {
-  margin:10px;
+  margin:20px;
 }
 
 .words {
@@ -160,7 +160,7 @@ img {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: #8e6d44;
   color: black;
 }
 
